@@ -1,0 +1,53 @@
+body {
+   font-family: 'Gabriela', serif;
+   background-image: url(img/background.png);
+   color: white;
+   margin: 0 auto;
+   max-width: 960px;
+}
+.results {
+   display: flex;
+   flex-direction: column;
+}
+.results h1 {
+   text-transform: uppercase;
+}
+.results img {
+   width: 350px;
+   height: 350px;
+}
+.results > div {
+   /* display: flex; */
+   display: none;
+   align-items: center;
+}
+input[type="radio"]{
+   cursor: pointer;
+   width: 25px;
+   height: 25px;
+   vertical-align: bottom;
+}
+.button {
+   text-align: center;
+}
+button {
+   cursor: pointer;
+   background: #cfaa05;
+   color: #000;
+   font-size: 20px;
+   border: double black 4px;
+   font-family: 'Gabriela', serif;
+   text-transform: uppercase;
+   font-weight: bold;
+   padding: 10px 25px;
+   margin: 20px;
+}
+button:hover {
+   opacity: 0.8;
+}
+.ques {
+   margin: 20px;
+   background: rgba(0, 0, 0, 0.623);
+   border-radius: 20px;
+   padding: 20px 50px;
+}
