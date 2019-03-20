@@ -3,8 +3,10 @@ body {
    background-image: url(background.png);
    color: white;
    margin: 0 auto;
-   max-width: 960px;
-   max-height: 500px;
+}
+.wrap {
+   width: 960px;
+   height: 500px;
    overflow-y: scroll;
 }
 .results {
