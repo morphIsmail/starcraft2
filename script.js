@@ -48,7 +48,7 @@ $(function () {
             terran--;
             break;
       }
-      $('div.ques').html('<h2>С кем вы поговорите на копье Адуна?</h2><input checked type="radio" name="q20" value="protos-1">С Абатуром (мастер эволюции)<br><input type="radio" name="q20" value="protos-1">Со Свонном (инженер)<br><input type="radio" name="q20" value="protos">С Караксом (фазовый кузнец)<br>');
+      $('div.ques').html('<h2>С кем вы поговорите на копье Адуна?</h2><input type="radio" name="q20" value="protos-1">С Абатуром (мастер эволюции)<br><input type="radio" name="q20" value="protos-1">Со Свонном (инженер)<br><input checked type="radio" name="q20" value="protos">С Караксом (фазовый кузнец)<br>');
    }
 
    function q3() {
@@ -63,7 +63,7 @@ $(function () {
             protos--;
             break;
       }
-      $('div.ques').html('<h2>Перед вами хорошо укреплённый терранский бункер</h2><input checked type="radio" name="q4" value="primal">Я ассимилирую эссенцию тиранозора, который обитает в этих местах и эволюционирую<br><input type="radio" name="q4" value="protos">Запрошу орбитальный удар если они первые проявят агрессию<br><input type="radio" name="q4" value="terran">Подойду поговорить с морпехами<br>');
+      $('div.ques').html('<h2>Перед вами хорошо укреплённый терранский бункер</h2><input type="radio" name="q4" value="primal">Я ассимилирую эссенцию тиранозора, который обитает в этих местах и эволюционирую<br><input checked type="radio" name="q4" value="protos">Запрошу орбитальный удар если они первые проявят агрессию<br><input type="radio" name="q4" value="terran">Подойду поговорить с морпехами<br>');
    }
 
    function q4() {
@@ -121,7 +121,7 @@ $(function () {
             zerg -= 2;
             break;
       }
-      $('div.ques').html('<h2>Королева приказывает вам обрушить свой гнев на миры доминиона</h2><input checked type="radio" name="q1" value="zerg">Должен подчиниться<br><input type="radio" name="q1" value="primal">Пока она собирает, я следую<br><input type="radio" name="q1" value="protos">Её псионная сила на меня не действует<br>');
+      $('div.ques').html('<h2>Королева приказывает вам обрушить свой гнев на миры доминиона</h2><input type="radio" name="q1" value="zerg">Должен подчиниться<br><input type="radio" name="q1" value="primal">Пока она собирает, я следую<br><input checked type="radio" name="q1" value="protos">Её псионная сила на меня не действует<br>');
    }
 
    function q7() {
@@ -142,7 +142,7 @@ $(function () {
             zerg--;
             break;
       }
-      $('div.ques').html('<h2>Перед вами высший тамплиер</h2><input checked type="radio" name="q6" value="primal">Сильная эссенция, но я не могу её собрать<br><input type="radio" name="q6" value="zerg">Уничтожить протоссов<br><input type="radio" name="q6" value="protos">Стать архонтом<br><input type="radio" name="q6" value="terran">Спросить как дела у Артаниса<br>');
+      $('div.ques').html('<h2>Перед вами высший тамплиер</h2><input type="radio" name="q6" value="primal">Сильная эссенция, но я не могу её собрать<br><input type="radio" name="q6" value="zerg">Уничтожить протоссов<br><input type="radio" name="q6" value="protos">Стать архонтом<br><input checked type="radio" name="q6" value="terran">Спросить как дела у Артаниса<br>');
    }
 
    function q8() {
@@ -171,7 +171,7 @@ $(function () {
             zerg--;
             break;
       }
-      $('div.ques').html('<h2>Вы заметили морпеха который не подчиняется вашему приказу</h2><input checked type="radio" name="q8" value="terran1">Уничтожить мимикрида<br><input type="radio" name="q8" value="terran-1">Сделать ему выговор<br>');
+      $('div.ques').html('<h2>Вы заметили морпеха который не подчиняется вашему приказу</h2><input type="radio" name="q8" value="terran1">Уничтожить мимикрида<br><input checked type="radio" name="q8" value="terran-1">Сделать ему выговор<br>');
    }
 
    function q9() {
@@ -186,7 +186,7 @@ $(function () {
             terran--;
             break;
       }
-      $('div.ques').html('<h2>На вас движется стая саранчидов</h2><input checked type="radio" name="q10" value="primal">Много эссенции, можно собрать<br><input type="radio" name="q10" value="zerg">Приказать им лететь дальше<br><input type="radio" name="q10" value="protos">Попытаться уничтожить фениксами пока они в воздухе<br>');
+      $('div.ques').html('<h2>На вас движется стая саранчидов</h2><input type="radio" name="q10" value="primal">Много эссенции, можно собрать<br><input checked type="radio" name="q10" value="zerg">Приказать им лететь дальше<br><input type="radio" name="q10" value="protos">Попытаться уничтожить фениксами пока они в воздухе<br>');
    }
 
    function q10() {
@@ -207,7 +207,7 @@ $(function () {
             protos--;
             break;
       }
-      $('div.ques').html('<h2>Вы видите изначальный омут рождения, что вы сделаете?</h2><input checked type="radio" name="q3" value="primal">Соберу много эссенции<br><input type="radio" name="q3" value="zerg">Моё тело не выдержит такую мощь<br><input type="radio" name="q3" value="protos">Попытаюсь уничтожить это место<br>');
+      $('div.ques').html('<h2>Вы видите изначальный омут рождения, что вы сделаете?</h2><input type="radio" name="q3" value="primal">Соберу много эссенции<br><input checked type="radio" name="q3" value="zerg">Моё тело не выдержит такую мощь<br><input type="radio" name="q3" value="protos">Попытаюсь уничтожить это место<br>');
    }
 
    function q11() {
@@ -271,7 +271,7 @@ $(function () {
             protos--;
             break;
       }
-      $('div.ques').html('<h2>Зератул и Воразун</h2><input checked type="radio" name="q23" value="protos-1">Связаны Кхалой<br><input type="radio" name="q23" value="protos-2">Муж и жена<br><input type="radio" name="q23" value="protos">Тёмные тамплиеры<br><input type="radio" name="q23" value="protos-3">Новый вид зергов<br>');
+      $('div.ques').html('<h2>Зератул и Воразун</h2><input type="radio" name="q23" value="protos-1">Связаны Кхалой<br><input checked type="radio" name="q23" value="protos-2">Муж и жена<br><input type="radio" name="q23" value="protos">Тёмные тамплиеры<br><input type="radio" name="q23" value="protos-3">Новый вид зергов<br>');
    }
 
    function q14() {
@@ -418,7 +418,7 @@ $(function () {
             protos--;
             break;
       }
-      $('div.ques').html('<h2>Как вы поприветствуете Джеймса Рейнора</h2><input checked type="radio" name="q22" value="protos">Друг Рейнор<br><input type="radio" name="q22" value="terran">Привет, ковбой<br><input type="radio" name="q22" value="primal">Мне нужна твоя эссенция<br>');
+      $('div.ques').html('<h2>Как вы поприветствуете Джеймса Рейнора</h2><input type="radio" name="q22" value="protos">Друг Рейнор<br><input checked type="radio" name="q22" value="terran">Привет, ковбой<br><input type="radio" name="q22" value="primal">Мне нужна твоя эссенция<br>');
    }
 
    function q22() {
@@ -458,7 +458,7 @@ $(function () {
             terran--;
             break;
       }
-      $('div.ques').html('<h2>Амун собирается уничтожить Айур</h2><input checked type="radio" name="q21" value="zerg">Помочь протоссам, а потом перебить тех, кто остался<br><input type="radio" name="q21" value="protos">Попытаться отправить Амуна в стазис<br><input type="radio" name="q21" value="protos">Послать челноки на Шакурас и запросить помощь Золотой Армады<br><input type="radio" name="q21" value="taldarim">Вызвать Флот Смерти и дать Амуну бой<br>');
+      $('div.ques').html('<h2>Амун собирается уничтожить Айур</h2><input checked type="radio" name="q21" value="zerg">Помочь протоссам<br><input type="radio" name="q21" value="protos">Попытаться отправить Амуна в стазис<br><input type="radio" name="q21" value="protos">Послать челноки на Шакурас и запросить помощь Золотой Армады<br><input type="radio" name="q21" value="taldarim">Вызвать Флот Смерти и дать Амуну бой<br>');
    }
 
    function q24() {
