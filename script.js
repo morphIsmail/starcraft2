@@ -403,7 +403,7 @@ $(function () {
             terran--;
             break;
       }
-      $('div.ques').html('<h2>Пустота…</h2><input checked type="radio" name="q18" value="protos">Холодна<br><input type="radio" name="q18" value="protos-1">Лучший друг человека<br>');
+      $('div.ques').html('<h2>Пустота…</h2><input checked type="radio" name="q18" value="protos-1">Лучший друг человека<br><input type="radio" name="q18" value="protos">Холодна<br>');
    }
 
    function q21() {
@@ -545,31 +545,82 @@ $(function () {
 
    $('button').click(function () {
       switch ($('button').attr('q')) {
-         case '1': q1(); break;
-         case '2': q2(); break;
-         case '3': q3(); break;
-         case '4': q4(); break;
-         case '5': q5(); break;
-         case '6': q6(); break;
-         case '7': q7(); break;
-         case '8': q8(); break;
-         case '9': q9(); break;
-         case '10': q10(); break;
-         case '11': q11(); break;
-         case '12': q12(); break;
-         case '13': q13(); break;
-         case '14': q14(); break;
-         case '15': q15(); break;
-         case '16': q16(); break;
-         case '17': q17(); break;
-         case '18': q18(); break;
-         case '19': q19(); break;
-         case '20': q20(); break;
-         case '21': q21(); break;
-         case '22': q22(); break;
-         case '23': q23(); break;
-         case '24': q24(); $(this).text('Результат'); break;
-         case '25': q25(); break;
+         case '1':
+            q1();
+            break;
+         case '2':
+            q2();
+            break;
+         case '3':
+            q3();
+            break;
+         case '4':
+            q4();
+            break;
+         case '5':
+            q5();
+            break;
+         case '6':
+            q6();
+            break;
+         case '7':
+            q7();
+            break;
+         case '8':
+            q8();
+            break;
+         case '9':
+            q9();
+            break;
+         case '10':
+            q10();
+            break;
+         case '11':
+            q11();
+            break;
+         case '12':
+            q12();
+            break;
+         case '13':
+            q13();
+            break;
+         case '14':
+            q14();
+            break;
+         case '15':
+            q15();
+            break;
+         case '16':
+            q16();
+            break;
+         case '17':
+            q17();
+            break;
+         case '18':
+            q18();
+            break;
+         case '19':
+            q19();
+            break;
+         case '20':
+            q20();
+            break;
+         case '21':
+            q21();
+            break;
+         case '22':
+            q22();
+            break;
+         case '23':
+            q23();
+            break;
+         case '24':
+            q24();
+            $(this).text('Результат');
+            break;
+         case '25':
+            q25();
+            break;
       }
       console.log('Зерг: ' + zerg + '\nИзначальный: ' + primal + '\nПротосс: ' + protos + '\nТалдарим: ' + taldarim + '\nТерран: ' + terran);
    })
