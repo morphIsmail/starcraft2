@@ -622,6 +622,6 @@ $(function () {
             q25();
             break;
       }
-      console.log('Зерг: ' + zerg + '\nИзначальный: ' + primal + '\nПротосс: ' + protos + '\nТалдарим: ' + taldarim + '\nТерран: ' + terran);
+      //console.log('Зерг: ' + zerg + '\nИзначальный: ' + primal + '\nПротосс: ' + protos + '\nТалдарим: ' + taldarim + '\nТерран: ' + terran);
    })
 })
