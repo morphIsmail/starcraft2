@@ -4,7 +4,12 @@ body {
    color: white;
    margin: 0 auto;
 }
+h3 {
+   font-size: 16px;
+   font-weight: 400;
+}
 .wrap {
+   padding: 0px 15px;
    display: flex;
    justify-content: center;
    flex-direction: column;
@@ -21,8 +26,8 @@ body {
    text-transform: uppercase;
 }
 .results img {
-   width: 350px;
-   height: 350px;
+   width: 300px;
+   height: 300px;
 }
 .results > div {
    /* display: flex; */
@@ -52,6 +57,9 @@ button {
    font-weight: bold;
    padding: 15px 65px;
    margin: 10px;
+}
+button:focus {
+   outline: none;
 }
 button:hover {
    opacity: 0.8;
