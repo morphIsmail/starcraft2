@@ -512,7 +512,7 @@ $(function () {
             'display': 'flex'
          });
          $('.wrap').css({
-            'background-image': 'url(zerg_bg.jpg)'
+            'background-image': 'url(img/zerg_bg.jpg)'
          })
          //Изначальный
       } else if (primal > protos && primal > terran && primal >= 7) {
@@ -520,7 +520,7 @@ $(function () {
             'display': 'flex'
          });
          $('.wrap').css({
-            'background-image': 'url(primal_bg.jpg)'
+            'background-image': 'url(img/primal_bg.jpg)'
          })
          //Протосс
       } else if (protos > zerg && protos > terran && taldarim < 4 && Math.abs(protos - zerg) > 3) {
@@ -528,7 +528,7 @@ $(function () {
             'display': 'flex'
          });
          $('.wrap').css({
-            'background-image': 'url(protos_bg.jpg)'
+            'background-image': 'url(img/protos_bg.jpg)'
          })
          //Талдарим
       } else if (protos > zerg && protos > terran && taldarim >= 4) {
@@ -536,7 +536,7 @@ $(function () {
             'display': 'flex'
          });
          $('.wrap').css({
-            'background-image': 'url(taldarim_bg.jpg)'
+            'background-image': 'url(img/taldarim_bg.jpg)'
          })
          //Терран
       } else if (terran > zerg && terran > protos) {
@@ -544,7 +544,7 @@ $(function () {
             'display': 'flex'
          });
          $('.wrap').css({
-            'background-image': 'url(terran_bg.jpg)'
+            'background-image': 'url(img/terran_bg.jpg)'
          })
          //Гибрид
       } else if (Math.abs(protos - zerg) <= 3) {
@@ -552,7 +552,7 @@ $(function () {
             'display': 'flex'
          });
          $('.wrap').css({
-            'background-image': 'url(hybrid_bg.jpg)'
+            'background-image': 'url(img/hybrid_bg.jpg)'
          })
          //Заражённый терран
       } else {
@@ -560,7 +560,7 @@ $(function () {
             'display': 'flex'
          });
          $('.wrap').css({
-            'background-image': 'url(infested_bg.jpg)'
+            'background-image': 'url(img/infested_bg.jpg)'
          })
       }
    }

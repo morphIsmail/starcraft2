@@ -15,7 +15,7 @@ h3 {
    font-weight: 400;
 }
 .wrap {
-   background-image: url(1.png);
+   background-image: url(img/1.png);
    background-size: cover;
    padding: 0px 15px;
    display: flex;
