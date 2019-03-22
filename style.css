@@ -1,20 +1,24 @@
 body {
-   font-family: 'Gabriela', serif;
-   background-image: url(1.png);
+   font-family: 'Gabriela', serif;  
    color: white;
    margin: 0 auto;
+}
+img[src="sc.png"] {
+   width: 100%;
 }
 h3 {
    font-size: 16px;
    font-weight: 400;
 }
 .wrap {
+   background-image: url(1.png);
+   background-size: cover;
    padding: 0px 15px;
    display: flex;
    justify-content: center;
    flex-direction: column;
     
-   width: 800px;
+   max-width: 800px;
    height: 600px;
    /* border: 1px solid red; */
 }
@@ -33,6 +37,21 @@ h3 {
    /* display: flex; */
    display: none;
    align-items: center;
+}
+label {
+   cursor: pointer;
+}
+p.error {
+   display: block;
+   position: absolute;
+   left: 0;
+   top: 0;
+   color:red;
+   background: rgba(0, 0, 0, 0.9);
+   padding: 10px;
+   border-radius: 0 8px 8px 0;
+   text-transform: uppercase;
+   font-weight: bold;
 }
 input[type="radio"]{
    cursor: pointer;

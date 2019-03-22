@@ -1,4 +1,5 @@
 $(function () {
+   $('p.error').hide();
    var zerg = 0,
       primal = 0,
       protos = 0,
@@ -26,7 +27,7 @@ $(function () {
             primal++;
             break;
       }
-      $('div.ques').html('<h2>Я река…</h2><input checked type="radio" name="q2" value="protos">А я звёздный охотник<br><input type="radio" name="q2" value="primal">Враги плывущие обломки<br><input type="radio" name="q2" value="terran">Ты моё море<br>');
+      $('div.ques').html('<h2>Я река…</h2><input type="radio" name="q2" id="ans1" value="protos"><label for="ans1">А я звёздный охотник</label><br><input type="radio" name="q2" id="ans2" value="primal"><label for="ans2">Враги плывущие обломки</label><br><input type="radio" name="q2" id="ans3" value="terran"><label for="ans3">Ты моё море</label><br>');
    }
 
    function q2() {
@@ -48,7 +49,7 @@ $(function () {
             terran--;
             break;
       }
-      $('div.ques').html('<h2>С кем вы поговорите на копье Адуна?</h2><input type="radio" name="q20" value="protos-1">С Абатуром (мастер эволюции)<br><input type="radio" name="q20" value="protos-1">Со Свонном (инженер)<br><input checked type="radio" name="q20" value="protos">С Караксом (фазовый кузнец)<br>');
+      $('div.ques').html('<h2>С кем вы поговорите на копье Адуна?</h2><input type="radio" name="q20" id="ans1" value="protos-1"><label for="ans1">С Абатуром (мастер эволюции)</label><br><input type="radio" name="q20" id="ans2" value="protos-1"><label for="ans2">Со Свонном (инженер)</label><br><input type="radio" name="q20" id="ans3" value="protos"><label for="ans3">С Караксом (фазовый кузнец)</lable><br>');
    }
 
    function q3() {
@@ -63,7 +64,7 @@ $(function () {
             protos--;
             break;
       }
-      $('div.ques').html('<h2>Перед вами хорошо укреплённый терранский бункер</h2><input type="radio" name="q4" value="primal">Я ассимилирую эссенцию тиранозора, который обитает в этих местах и эволюционирую<br><input checked type="radio" name="q4" value="protos">Запрошу орбитальный удар если они первые проявят агрессию<br><input type="radio" name="q4" value="terran">Подойду поговорить с морпехами<br>');
+      $('div.ques').html('<h2>Перед вами хорошо укреплённый терранский бункер</h2><input type="radio" name="q4" id="ans1" value="primal"><label for="ans1">Я ассимилирую эссенцию тиранозора, который обитает в этих местах и эволюционирую</label><br><input type="radio" name="q4" id="ans2" value="protos"><label for="ans2">Запрошу орбитальный удар если они первые проявят агрессию</label><br><input type="radio" name="q4" id="ans3" value="terran"><label for="ans3">Подойду поговорить с морпехами</label><br>');
    }
 
    function q4() {
@@ -85,7 +86,7 @@ $(function () {
             protos--;
             break;
       }
-      $('div.ques').html('<h2>Как насчёт свалить со мной, ковбой?</h2><input checked type="radio" name="q12" value="terran">Чёрт, давно пора<br><input type="radio" name="q12" value="terran">Чёрт, давно пора<br><input type="radio" name="q12" value="terran">Чёрт, давно пора<br>');
+      $('div.ques').html('<h2>Как насчёт свалить со мной, ковбой?</h2><input type="radio" name="q12" id="ans1" value="terran"><label for="ans1">Чёрт, давно пора</label><br><input type="radio" name="q12" id="ans2" value="terran"><label for="ans2">Чёрт, давно пора</label><br><input type="radio" name="q12" id="ans3" value="terran"><label for="ans3">Чёрт, давно пора</label><br>');
    }
 
    function q5() {
@@ -97,7 +98,7 @@ $(function () {
             terran++;
             break;
       }
-      $('div.ques').html('<h2>На вас напали</h2><input checked type="radio" name="q5" value="zerg">Нам нужны роевики, споровики и плёточники<br><input type="radio" name="q5" value="protos">Нужно вызвать кайдариновые монолиты и фотонные пушки<br><input type="radio" name="q5" value="terran">Возвести планетарную крепость, бункеры и подвести осадные танки<br>');
+      $('div.ques').html('<h2>На вас напали</h2><input type="radio" name="q5" id="ans1" value="zerg"><label for="ans1">Нам нужны роевики, споровики и плёточники</label><br><input type="radio" name="q5" id="ans2" value="protos"><label for="ans2">Нужно вызвать кайдариновые монолиты и фотонные пушки</label><br><input type="radio" name="q5" id="ans3" value="terran"><label for="ans3">Возвести планетарную крепость, бункеры и подвести осадные танки</label><br>');
    }
 
    function q6() {
@@ -121,7 +122,7 @@ $(function () {
             zerg -= 2;
             break;
       }
-      $('div.ques').html('<h2>Королева приказывает вам обрушить свой гнев на миры доминиона</h2><input type="radio" name="q1" value="zerg">Должен подчиниться<br><input type="radio" name="q1" value="primal">Пока она собирает, я следую<br><input checked type="radio" name="q1" value="protos">Её псионная сила на меня не действует<br>');
+      $('div.ques').html('<h2>Королева приказывает вам обрушить свой гнев на миры доминиона</h2><input type="radio" name="q1" id="ans1" value="zerg"><label for="ans1">Должен подчиниться</label><br><input type="radio" name="q1" id="ans2" value="primal"><label for="ans2">Пока она собирает, я следую</label><br><input type="radio" name="q1" id="ans3" value="protos"><label for="ans3">Её псионная сила на меня не действует</label><br>');
    }
 
    function q7() {
@@ -142,7 +143,7 @@ $(function () {
             zerg--;
             break;
       }
-      $('div.ques').html('<h2>Перед вами высший тамплиер</h2><input type="radio" name="q6" value="primal">Сильная эссенция, но я не могу её собрать<br><input type="radio" name="q6" value="zerg">Уничтожить протоссов<br><input type="radio" name="q6" value="protos">Стать архонтом<br><input checked type="radio" name="q6" value="terran">Спросить как дела у Артаниса<br>');
+      $('div.ques').html('<h2>Перед вами высший тамплиер</h2><input type="radio" name="q6" id="ans1" value="primal"><label for="ans1">Сильная эссенция, но я не могу её собрать</label><br><input type="radio" name="q6" id="ans2" value="zerg"><label for="ans2">Уничтожить протоссов</label><br><input type="radio" name="q6" id="ans3" value="protos"><label for="ans3">Стать архонтом</label><br><input type="radio" name="q6" id="ans4" value="terran"><label for="ans4">Спросить как дела у Артаниса</label><br>');
    }
 
    function q8() {
@@ -171,7 +172,7 @@ $(function () {
             zerg--;
             break;
       }
-      $('div.ques').html('<h2>Вы заметили морпеха который не подчиняется вашему приказу</h2><input type="radio" name="q8" value="terran1">Уничтожить мимикрида<br><input checked type="radio" name="q8" value="terran-1">Сделать ему выговор<br>');
+      $('div.ques').html('<h2>Вы заметили морпеха который не подчиняется вашему приказу</h2><input type="radio" name="q8" id="ans1" value="terran1"><label for="ans1">Уничтожить мимикрида</label><br><input type="radio" name="q8" id="ans2" value="terran-1"><label for="ans2">Сделать ему выговор</label><br>');
    }
 
    function q9() {
@@ -186,7 +187,7 @@ $(function () {
             terran--;
             break;
       }
-      $('div.ques').html('<h2>На вас движется стая саранчидов</h2><input type="radio" name="q10" value="primal">Много эссенции, можно собрать<br><input checked type="radio" name="q10" value="zerg">Приказать им лететь дальше<br><input type="radio" name="q10" value="protos">Попытаться уничтожить фениксами пока они в воздухе<br>');
+      $('div.ques').html('<h2>На вас движется стая саранчидов</h2><input type="radio" name="q10" id="ans1" value="primal"><label for="ans1">Много эссенции, можно собрать</label><br><input type="radio" name="q10" id="ans2" value="zerg"><label for="ans2">Приказать им лететь дальше</label><br><input type="radio" name="q10" id="ans3" value="protos"><label for="ans3">Попытаться уничтожить фениксами пока они в воздухе</label><br>');
    }
 
    function q10() {
@@ -207,7 +208,7 @@ $(function () {
             protos--;
             break;
       }
-      $('div.ques').html('<h2>Вы видите изначальный омут рождения, что вы сделаете?</h2><input type="radio" name="q3" value="primal">Соберу много эссенции<br><input checked type="radio" name="q3" value="zerg">Моё тело не выдержит такую мощь<br><input type="radio" name="q3" value="protos">Попытаюсь уничтожить это место<br>');
+      $('div.ques').html('<h2>Вы видите изначальный омут рождения, что вы сделаете?</h2><input type="radio" name="q3" id="ans1" value="primal"><label for="ans1">Соберу много эссенции</label><br><input type="radio" name="q3" id="ans2" value="zerg"><label for="ans2">Моё тело не выдержит такую мощь</label><br><input type="radio" name="q3" id="ans3" value="protos"><label for="ans3">Попытаюсь уничтожить это место</label><br>');
    }
 
    function q11() {
@@ -228,7 +229,7 @@ $(function () {
             zerg--;
             break;
       }
-      $('div.ques').html('<h2>Вы сильно устали сегодня</h2><input checked type="radio" name="q11" value="terran">Пойду в бар у Джо Рея<br><input type="radio" name="q11" value="zerg">Рой не знает усталости<br><input type="radio" name="q11" value="taldarim">Слабые, падут первыми<br>');
+      $('div.ques').html('<h2>Вы сильно устали сегодня</h2><input type="radio" name="q11" id="ans1" value="terran"><label for="ans1">Пойду в бар у Джо Рея</label><br><input type="radio" name="q11" id="ans2" value="zerg"><label for="ans2">Рой не знает усталости</label><br><input type="radio" name="q11" id="ans3" value="taldarim"><label for="ans3">Слабые, падут первыми</label><br>');
    }
 
    function q12() {
@@ -250,7 +251,7 @@ $(function () {
             zerg--;
             break;
       }
-      $('div.ques').html('<h2>Перед вами иерарх протоссов</h2><input checked type="radio" name="q19" value="taldarim">Вызвать на Рак-шир<br><input type="radio" name="q19" value="protos">Поприветствовать фразой «Эн Таро Тассадар»<br><input type="radio" name="q19" value="zerg">Отправить рой в атаку<br>');
+      $('div.ques').html('<h2>Перед вами иерарх протоссов</h2><input type="radio" name="q19" id="ans1" value="taldarim"><label for="ans1">Вызвать на Рак-шир</label><br><input type="radio" name="q19" id="ans2" value="protos"><label for="ans2">Поприветствовать фразой «Эн Таро Тассадар»</label><br><input type="radio" name="q19" id="ans3" value="zerg"><label for="ans3">Отправить рой в атаку</label><br>');
    }
 
    function q13() {
@@ -271,7 +272,7 @@ $(function () {
             protos--;
             break;
       }
-      $('div.ques').html('<h2>Зератул и Воразун</h2><input type="radio" name="q23" value="protos-1">Связаны Кхалой<br><input checked type="radio" name="q23" value="protos-2">Муж и жена<br><input type="radio" name="q23" value="protos">Тёмные тамплиеры<br><input type="radio" name="q23" value="protos-3">Новый вид зергов<br>');
+      $('div.ques').html('<h2>Зератул и Воразун</h2><input type="radio" name="q23" id="ans1" value="protos-1"><label for="ans1">Связаны Кхалой</label><br><input type="radio" name="q23" id="ans2" value="protos-2"><label for="ans2">Муж и жена</label><br><input type="radio" name="q23" id="ans3" value="protos"><label for="ans3">Тёмные тамплиеры</label><br><input type="radio" name="q23" id="ans4" value="protos-3"><label for="ans4">Новый вид зергов</label><br>');
    }
 
    function q14() {
@@ -292,7 +293,7 @@ $(function () {
             protos -= 3;
             break;
       }
-      $('div.ques').html('<h2>В этих местах много источников тирозина</h2><input checked type="radio" name="q13" value="taldarim">Защищать месторождения от инопланетных захватчиков<br><input type="radio" name="q13" value="terran">Добыть как можно больше, пока эти Талдаримские живчики не успели ничего понять<br>');
+      $('div.ques').html('<h2>В этих местах много источников тирозина</h2><input type="radio" name="q13" id="ans1" value="taldarim"><label for="ans1">Защищать месторождения от инопланетных захватчиков</label><br><input type="radio" name="q13" id="ans2" value="terran"><label for="ans2">Добыть как можно больше, пока эти Талдаримские живчики не успели ничего понять</label><br>');
    }
 
    function q15() {
@@ -308,7 +309,7 @@ $(function () {
             terran++;
             break;
       }
-      $('div.ques').html('<h2>В лаборатории ставят опыты над бруталиском</h2><input checked type="radio" name="q7" value="zerg">Бруталиск – вершина эволюции, нужен рою<br><input type="radio" name="q7" value="terran">Поинтересоваться у парней что интересного они узнали<br><input type="radio" name="q7" value="protos">Бруталиск очень опасен лучше уничтожить его вместе с терранской лабораторией<br>');
+      $('div.ques').html('<h2>В лаборатории ставят опыты над бруталиском</h2><input type="radio" name="q7" id="ans1" value="zerg"><label for="ans1">Бруталиск – вершина эволюции, нужен рою</label><br><input type="radio" name="q7" id="ans2" value="terran"><label for="ans2">Поинтересоваться у парней что интересного они узнали</label><br><input type="radio" name="q7" id="ans3" value="protos"><label for="ans3">Бруталиск очень опасен лучше уничтожить его вместе с терранской лабораторией</label><br>');
    }
 
    function q16() {
@@ -332,7 +333,7 @@ $(function () {
             zerg--;
             break;
       }
-      $('div.ques').html('<h2>Как зовут Свонна?</h2><input checked type="radio" name="q14" value="terran-1">Гэбриэль<br><input type="radio" name="q14" value="terran-1">Джеймс<br><input type="radio" name="q14" value="terran">Рори<br>');
+      $('div.ques').html('<h2>Как зовут Свонна?</h2><input type="radio" name="q14" id="ans1" value="terran-1"><label for="ans1">Гэбриэль</label><br><input type="radio" name="q14" id="ans2" value="terran-1"><label for="ans2">Джеймс</label><br><input type="radio" name="q14" id="ans3" value="terran"><label for="ans3">Рори</label><br>');
    }
 
    function q17() {
@@ -347,7 +348,7 @@ $(function () {
             terran++;
             break;
       }
-      $('div.ques').html('<h2>Феникс - </h2><input checked type="radio" name="q24" value="protos-1">Тамплиер<br><input type="radio" name="q24" value="protos-1">Неразим<br><input type="radio" name="q24" value="protos">Чистильщик<br><input type="radio" name="q24" value="protos-1">Талдарим<br>');
+      $('div.ques').html('<h2>Феникс - </h2><input type="radio" name="q24" id="ans1" value="protos-1"><label for="ans1">Тамплиер</label><br><input type="radio" name="q24" id="ans2" value="protos-1"><label for="ans2">Неразим</label><br><input type="radio" name="q24" id="ans3" value="protos"><label for="ans3">Чистильщик</label><br><input type="radio" name="q24" id="ans4" value="protos-1"><label for="ans4">Талдарим</label><br>');
    }
 
    function q18() {
@@ -362,7 +363,7 @@ $(function () {
             protos--;
             break;
       }
-      $('div.ques').html('<h2>Вам необходимо догнать материнский корабль протоссов</h2><input checked type="radio" name="q15" value="terran">Использую гиперпрыжок<br><input type="radio" name="q15" value="zerg">Перехвачу его, внедрив паразит<br><input type="radio" name="q15" value="protos">Отправлю челнок с посланием<br>');
+      $('div.ques').html('<h2>Вам необходимо догнать материнский корабль протоссов</h2><input type="radio" name="q15" id="ans1" value="terran"><label for="ans1">Использую гиперпрыжок</label><br><input type="radio" name="q15" id="ans2" value="zerg"><label for="ans2">Перехвачу его, внедрив паразит</label><br><input type="radio" name="q15" id="ans3" value="protos"><label for="ans3">Отправлю челнок с посланием</label><br>');
    }
 
    function q19() {
@@ -386,7 +387,7 @@ $(function () {
             zerg--;
             break;
       }
-      $('div.ques').html('<h2>Зерги заразили командные центры Вирофагами</h2><input checked type="radio" name="q16" value="protos">Нужно уничтожить всех, чтобы эпидемия не распространилась<br><input type="radio" name="q16" value="terran">Сжечь только зараженные строения и спасти как можно больше людей<br>');
+      $('div.ques').html('<h2>Зерги заразили командные центры Вирофагами</h2><input type="radio" name="q16" id="ans1" value="protos"><label for="ans1">Нужно уничтожить всех, чтобы эпидемия не распространилась</label><br><input type="radio" name="q16" id="ans2" value="terran"><label for="ans2">Сжечь только зараженные строения и спасти как можно больше людей</label><br>');
    }
 
    function q20() {
@@ -403,7 +404,7 @@ $(function () {
             terran--;
             break;
       }
-      $('div.ques').html('<h2>Пустота…</h2><input checked type="radio" name="q18" value="protos-1">Лучший друг человека<br><input type="radio" name="q18" value="protos">Холодна<br>');
+      $('div.ques').html('<h2>Пустота…</h2><input type="radio" name="q18" id="ans1" value="protos-1"><label for="ans1">Лучший друг человека</label><br><input type="radio" name="q18" id="ans2" value="protos"><label for="ans2">Холодна</label><br>');
    }
 
    function q21() {
@@ -418,7 +419,7 @@ $(function () {
             protos--;
             break;
       }
-      $('div.ques').html('<h2>Как вы поприветствуете Джеймса Рейнора</h2><input type="radio" name="q22" value="protos">Друг Рейнор<br><input checked type="radio" name="q22" value="terran">Привет, ковбой<br><input type="radio" name="q22" value="primal">Мне нужна твоя эссенция<br>');
+      $('div.ques').html('<h2>Как вы поприветствуете Джеймса Рейнора</h2><input type="radio" name="q22" id="ans1" value="protos"><label for="ans1">Друг Рейнор</label><br><input type="radio" name="q22" id="ans2" value="terran"><label for="ans2">Привет, ковбой</label><br><input type="radio" name="q22" id="ans3" value="primal"><label for="ans3">Мне нужна твоя эссенция</label><br>');
    }
 
    function q22() {
@@ -440,7 +441,7 @@ $(function () {
             protos--;
             break;
       }
-      $('div.ques').html('<h2>Вы собрали много кредитов на продаже тирозина</h2><input checked type="radio" name="q17" value="terran">Нанять лучших головорезов доминиона<br><input type="radio" name="q17" value="terran2">Усовершенствовать технологии<br><input type="radio" name="q17" value="terran-1">Отправить их в фонд Мёбиуса для изучения гибридов<br>');
+      $('div.ques').html('<h2>Вы собрали много кредитов на продаже тирозина</h2><input type="radio" name="q17" id="ans1" value="terran"><label for="ans1">Нанять лучших головорезов доминиона</label><br><input type="radio" name="q17" id="ans2" value="terran2"><label for="ans2">Усовершенствовать технологии</label><br><input type="radio" name="q17" id="ans3" value="terran-1"><label for="ans3">Отправить их в фонд Мёбиуса для изучения гибридов</label><br>');
    }
 
    function q23() {
@@ -458,7 +459,7 @@ $(function () {
             terran--;
             break;
       }
-      $('div.ques').html('<h2>Амун собирается уничтожить Айур</h2><input checked type="radio" name="q21" value="zerg">Помочь протоссам<br><input type="radio" name="q21" value="protos">Попытаться отправить Амуна в стазис<br><input type="radio" name="q21" value="protos">Послать челноки на Шакурас и запросить помощь Золотой Армады<br><input type="radio" name="q21" value="taldarim">Вызвать Флот Смерти и дать Амуну бой<br>');
+      $('div.ques').html('<h2>Амун собирается уничтожить Айур</h2><input type="radio" name="q21" id="ans1" value="zerg"><label for="ans1">Помочь протоссам</label><br><input type="radio" name="q21" id="ans2" value="protos"><label for="ans2">Попытаться отправить Амуна в стазис</label><br><input type="radio" name="q21" id="ans3" value="protos"><label for="ans3">Послать челноки на Шакурас и запросить помощь Золотой Армады</label><br><input type="radio" name="q21" id="ans4" value="taldarim"><label for="ans4">Вызвать Флот Смерти и дать Амуну бой</label><br>');
    }
 
    function q24() {
@@ -479,7 +480,7 @@ $(function () {
             protos--;
             break;
       }
-      $('div.ques').html('<h2>Зачем вы прилетели на Чар?</h2><input checked type="radio" name="q9" value="protos">Выследить и убить королеву клинков<br><input type="radio" name="q9" value="terran">Найти Керриган и убедить вернуться на Мар-Сару<br><input type="radio" name="q9" value="zerg">Искупаться в слизи<br>');
+      $('div.ques').html('<h2>Зачем вы прилетели на Чар?</h2><input type="radio" name="q9" id="ans1" value="protos"><label for="ans1">Выследить и убить королеву клинков</label><br><input type="radio" name="q9" id="ans2" value="terran"><label for="ans2">Найти Керриган и убедить вернуться на Мар-Сару</label><br><input type="radio" name="q9" id="ans3" value="zerg"><label for="ans3">Искупаться в слизи</label><br>');
    }
 
    function q25() {
@@ -509,36 +510,57 @@ $(function () {
       if (zerg > protos && zerg > terran && primal < 7 && Math.abs(protos - zerg) > 3) {
          $('.results .zerg').css({
             'display': 'flex'
+         });
+         $('.wrap').css({
+            'background-image': 'url(zerg_bg.jpg)'
          })
          //Изначальный
       } else if (primal > protos && primal > terran && primal >= 7) {
          $('.results .primal').css({
             'display': 'flex'
+         });
+         $('.wrap').css({
+            'background-image': 'url(primal_bg.jpg)'
          })
          //Протосс
       } else if (protos > zerg && protos > terran && taldarim < 4 && Math.abs(protos - zerg) > 3) {
          $('.results .protos').css({
             'display': 'flex'
+         });
+         $('.wrap').css({
+            'background-image': 'url(protos_bg.jpg)'
          })
          //Талдарим
       } else if (protos > zerg && protos > terran && taldarim >= 4) {
          $('.results .taldarim').css({
             'display': 'flex'
+         });
+         $('.wrap').css({
+            'background-image': 'url(taldarim_bg.jpg)'
          })
          //Терран
       } else if (terran > zerg && terran > protos) {
          $('.results .terran').css({
             'display': 'flex'
+         });
+         $('.wrap').css({
+            'background-image': 'url(terran_bg.jpg)'
          })
          //Гибрид
       } else if (Math.abs(protos - zerg) <= 3) {
          $('.results .hybrid').css({
             'display': 'flex'
+         });
+         $('.wrap').css({
+            'background-image': 'url(hybrid_bg.jpg)'
          })
          //Заражённый терран
       } else {
          $('.results .infested_terran').css({
             'display': 'flex'
+         });
+         $('.wrap').css({
+            'background-image': 'url(infested_bg.jpg)'
          })
       }
    }
@@ -546,81 +568,231 @@ $(function () {
    $('button').click(function () {
       switch ($('button').attr('q')) {
          case '1':
-            q1();
-            break;
+            if ($('input:checked').val()) {
+               q1();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '2':
-            q2();
-            break;
+            if ($('input:checked').val()) {
+               q2();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '3':
-            q3();
-            break;
+            if ($('input:checked').val()) {
+               q3();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '4':
-            q4();
-            break;
+            if ($('input:checked').val()) {
+               q4();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '5':
-            q5();
-            break;
+            if ($('input:checked').val()) {
+               q5();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '6':
-            q6();
-            break;
+            if ($('input:checked').val()) {
+               q6();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '7':
-            q7();
-            break;
+            if ($('input:checked').val()) {
+               q7();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '8':
-            q8();
-            break;
+            if ($('input:checked').val()) {
+               q8();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '9':
-            q9();
-            break;
+            if ($('input:checked').val()) {
+               q9();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '10':
-            q10();
-            break;
+            if ($('input:checked').val()) {
+               q10();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '11':
-            q11();
-            break;
+            if ($('input:checked').val()) {
+               q11();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '12':
-            q12();
-            break;
+            if ($('input:checked').val()) {
+               q12();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '13':
-            q13();
-            break;
+            if ($('input:checked').val()) {
+               q13();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '14':
-            q14();
-            break;
+            if ($('input:checked').val()) {
+               q14();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '15':
-            q15();
-            break;
+            if ($('input:checked').val()) {
+               q15();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '16':
-            q16();
-            break;
+            if ($('input:checked').val()) {
+               q16();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '17':
-            q17();
-            break;
+            if ($('input:checked').val()) {
+               q17();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '18':
-            q18();
-            break;
+            if ($('input:checked').val()) {
+               q18();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '19':
-            q19();
-            break;
+            if ($('input:checked').val()) {
+               q19();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '20':
-            q20();
-            break;
+            if ($('input:checked').val()) {
+               q20();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '21':
-            q21();
-            break;
+            if ($('input:checked').val()) {
+               q21();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '22':
-            q22();
-            break;
+            if ($('input:checked').val()) {
+               q22();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '23':
-            q23();
-            break;
+            if ($('input:checked').val()) {
+               q23();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '24':
-            q24();
-            $(this).text('Результат');
-            break;
+            if ($('input:checked').val()) {
+               q24();
+               $(this).text('Результат');
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
          case '25':
-            q25();
-            break;
+            if ($('input:checked').val()) {
+               q25();
+               break;
+            } else {
+               $('.button button').slideUp(100).delay(1300).slideDown(200);
+               $('p.error').slideDown(100).delay(1300).slideUp(200);
+               break;
+            }
       }
       //console.log('Зерг: ' + zerg + '\nИзначальный: ' + primal + '\nПротосс: ' + protos + '\nТалдарим: ' + taldarim + '\nТерран: ' + terran);
    })

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
    <meta charset="UTF-8">
@@ -14,26 +14,25 @@
       integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
 </head>
 
-
 <body>
    <div class="wrap">
       <img src="sc.png" alt="">
       <div class="questions">
          <div class="ques">
             <h2>Ваша любимая планета в мире StarCraft</h2>
-            <input checked type="radio" name="q25" value="protos">Шакурас<br>
-            <input type="radio" name="q25" value="taldarim">Слейн<br>
-            <input type="radio" name="q25" value="terran">Тарсонис<br>
-            <input type="radio" name="q25" value="protos">Айур<br>
-            <input type="radio" name="q25" value="zerg">Чар<br>
-            <input type="radio" name="q25" value="terran">Антига Прайм<br>
-            <input type="radio" name="q25" value="terran">Мар Сара<br>
-            <input type="radio" name="q25" value="primal">Зерус<br>
-            <input type="radio" name="q25" value="terran">Браксис<br>
+            <input type="radio" name="q25" id="ans1" value="protos"><label for="ans1">Шакурас</label><br>
+            <input type="radio" name="q25" id="ans2" value="taldarim"><label for="ans2">Слейн</label><br>
+            <input type="radio" name="q25" id="ans3" value="terran"><label for="ans3">Тарсонис</label><br>
+            <input type="radio" name="q25" id="ans4" value="protos"><label for="ans4">Айур</label><br>
+            <input type="radio" name="q25" id="ans5" value="zerg"><label for="ans5">Чар</label><br>
+            <input type="radio" name="q25" id="ans6" value="terran"><label for="ans6">Антига Прайм</label><br>
+            <input type="radio" name="q25" id="ans7" value="terran"><label for="ans7">Мар Сара</label><br>
+            <input type="radio" name="q25" id="ans8" value="primal"><label for="ans8">Зерус</label><br>
+            <input type="radio" name="q25" id="ans9" value="terran"><label for="ans9">Браксис</label><br>
          </div>
       </div>
       <div class="button"><button q="1">Далее</button></div>
-
+      <p class="error">Ответ не выбран!</p>
       <div class="results">
          <div class="zerg">
             <img src="zerg.png" alt="">
