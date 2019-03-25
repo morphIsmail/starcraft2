@@ -1,5 +1,5 @@
 body {
-   font-family: 'Gabriela', serif;  
+   font-family: 'Gabriela', serif;
    color: white;
    margin: 0 auto;
    -ms-user-select: none;
@@ -7,13 +7,12 @@ body {
    -khtml-user-select: none;
    -webkit-user-select: none;
 }
-img[src="sc.png"] {
-   width: 100%;
-}
+
 h3 {
    font-size: 16px;
    font-weight: 400;
 }
+
 .wrap {
    background-image: url(img/1.png);
    background-size: cover;
@@ -21,54 +20,63 @@ h3 {
    display: flex;
    justify-content: center;
    flex-direction: column;
-    
+
    max-width: 800px;
    height: 650px;
    /* border: 1px solid red; */
 }
+
 .results {
    display: flex;
    flex-direction: column;
 }
+
 .results h1 {
    text-transform: uppercase;
 }
+
 .results img {
    width: 300px;
    height: 300px;
 }
-.results > div {
+
+.results>div {
    /* display: flex; */
    display: none;
    align-items: center;
 }
+
 label {
    cursor: pointer;
 }
+
 p.error {
    display: block;
    position: absolute;
    left: 0;
    top: 0;
-   color:red;
+   color: red;
    background: rgba(0, 0, 0, 0.9);
    padding: 10px;
    border-radius: 0 8px 8px 0;
    text-transform: uppercase;
    font-weight: bold;
 }
-input[type="radio"]{
+
+input[type="radio"] {
    cursor: pointer;
    width: 25px;
    height: 25px;
    vertical-align: bottom;
 }
+
 .button {
    text-align: center;
 }
+
 button {
    background: #0f98d8;
-   background: linear-gradient(to bottom, #0f98d8 1%,#0179b0 100%);
+   background: linear-gradient(to bottom, #0f98d8 1%, #0179b0 100%);
    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.32);
    cursor: pointer;
    color: #fff;
@@ -81,15 +89,44 @@ button {
    padding: 15px 65px;
    margin: 10px;
 }
+
 button:focus {
    outline: none;
 }
+
 button:hover {
    opacity: 0.8;
 }
+
 .ques {
    margin: 10px;
    background: rgba(0, 0, 0, 0.623);
    border-radius: 20px;
    padding: 20px 50px;
+}
+
+@media screen and (max-width: 768px) {
+   .results>div {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .results h1 {
+      text-align: center;
+      font-size: 20px;
+   }
+
+   .results img {
+      width: 150px;
+      height: 150px;
+   }
+
+   h3 {
+      font-size: 12px;
+   }
+
+   button {
+      font-size: 14px;
+   }
 }

@@ -1,5 +1,6 @@
 $(function () {
    $('p.error').hide();
+
    var zerg = 0,
       primal = 0,
       protos = 0,
@@ -229,7 +230,7 @@ $(function () {
             zerg--;
             break;
       }
-      $('div.ques').html('<h2>Вы сильно устали сегодня</h2><input type="radio" name="q11" id="ans1" value="terran"><label for="ans1">Пойду в бар у Джо Рея</label><br><input type="radio" name="q11" id="ans2" value="zerg"><label for="ans2">Рой не знает усталости</label><br><input type="radio" name="q11" id="ans3" value="taldarim"><label for="ans3">Слабые, падут первыми</label><br>');
+      $('div.ques').html('<h2>Вы сильно устали сегодня</h2><input type="radio" name="q11" id="ans1" value="terran"><label for="ans1">Пойду в бар у Джорея</label><br><input type="radio" name="q11" id="ans2" value="zerg"><label for="ans2">Рой не знает усталости</label><br><input type="radio" name="q11" id="ans3" value="taldarim"><label for="ans3">Слабые, падут первыми</label><br>');
    }
 
    function q12() {
@@ -293,7 +294,7 @@ $(function () {
             protos -= 3;
             break;
       }
-      $('div.ques').html('<h2>В этих местах много источников тирозина</h2><input type="radio" name="q13" id="ans1" value="taldarim"><label for="ans1">Защищать месторождения от инопланетных захватчиков</label><br><input type="radio" name="q13" id="ans2" value="terran"><label for="ans2">Добыть как можно больше, пока эти Талдаримские живчики не успели ничего понять</label><br>');
+      $('div.ques').html('<h2>В этих местах много источников терразин</h2><input type="radio" name="q13" id="ans1" value="taldarim"><label for="ans1">Защищать месторождения от инопланетных захватчиков</label><br><input type="radio" name="q13" id="ans2" value="terran"><label for="ans2">Добыть как можно больше, пока эти Талдаримские живчики не успели ничего понять</label><br>');
    }
 
    function q15() {
@@ -333,7 +334,7 @@ $(function () {
             zerg--;
             break;
       }
-      $('div.ques').html('<h2>Как зовут Свонна?</h2><input type="radio" name="q14" id="ans1" value="terran-1"><label for="ans1">Гэбриэль</label><br><input type="radio" name="q14" id="ans2" value="terran-1"><label for="ans2">Джеймс</label><br><input type="radio" name="q14" id="ans3" value="terran"><label for="ans3">Рори</label><br>');
+      $('div.ques').html('<h2>Как зовут Свонна?</h2><input type="radio" name="q14" id="ans1" value="terran-1"><label for="ans1">Габриэль</label><br><input type="radio" name="q14" id="ans2" value="terran-1"><label for="ans2">Джеймс</label><br><input type="radio" name="q14" id="ans3" value="terran"><label for="ans3">Рори</label><br>');
    }
 
    function q17() {
@@ -441,7 +442,7 @@ $(function () {
             protos--;
             break;
       }
-      $('div.ques').html('<h2>Вы собрали много кредитов на продаже тирозина</h2><input type="radio" name="q17" id="ans1" value="terran"><label for="ans1">Нанять лучших головорезов доминиона</label><br><input type="radio" name="q17" id="ans2" value="terran2"><label for="ans2">Усовершенствовать технологии</label><br><input type="radio" name="q17" id="ans3" value="terran-1"><label for="ans3">Отправить их в фонд Мёбиуса для изучения гибридов</label><br>');
+      $('div.ques').html('<h2>Вы собрали много кредитов на продаже терразина</h2><input type="radio" name="q17" id="ans1" value="terran"><label for="ans1">Нанять лучших головорезов доминиона</label><br><input type="radio" name="q17" id="ans2" value="terran2"><label for="ans2">Усовершенствовать технологии</label><br><input type="radio" name="q17" id="ans3" value="terran-1"><label for="ans3">Отправить их в фонд Мёбиуса для изучения гибридов</label><br>');
    }
 
    function q23() {
