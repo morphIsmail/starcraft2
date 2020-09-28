@@ -2,230 +2,409 @@
 <html lang="ru">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Кто ты в мире StarCraft?</title>
-   <link rel="stylesheet" href="style.css">
-   <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
-   <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
-   <script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
-      integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Моя раса в StarCraft 2</title>
 </head>
 
 <body>
-   <div class="wrap">
-      <img src="img/sc.png" alt="" width="100%">
-      <div class="questions">
-         <div class="ques">
-            <h2>Ваша любимая планета в мире StarCraft</h2>
-            <input type="radio" name="q25" id="ans1" value="protos"><label for="ans1">Шакурас</label><br>
-            <input type="radio" name="q25" id="ans2" value="taldarim"><label for="ans2">Слейн</label><br>
-            <input type="radio" name="q25" id="ans3" value="terran"><label for="ans3">Тарсонис</label><br>
-            <input type="radio" name="q25" id="ans4" value="protos"><label for="ans4">Айур</label><br>
-            <input type="radio" name="q25" id="ans5" value="zerg"><label for="ans5">Чар</label><br>
-            <input type="radio" name="q25" id="ans6" value="terran"><label for="ans6">Антига Прайм</label><br>
-            <input type="radio" name="q25" id="ans7" value="terran"><label for="ans7">Мар Сара</label><br>
-            <input type="radio" name="q25" id="ans8" value="primal"><label for="ans8">Зерус</label><br>
-            <input type="radio" name="q25" id="ans9" value="terran"><label for="ans9">Браксис</label><br>
-         </div>
-      </div>
-      <div class="button"><button q="1">Далее</button></div>
-      <p class="error">Ответ не выбран!</p>
-      <div class="results">
-         <div class="zerg">
-            <img src="img/zerg.png" alt="">
-            <div>
-               <h1>Зерг</h1>
-               <h3>Вы истинный зерг, чистота эссенции и служение во славу роя это ваше предназначение. Ваша стая
-                  захватила
-                  множество миров и теперь рой стал ещё сильней. Королева Клинков довольна вами, продолжайте и дальше
-                  служить ей. Вы уважаете протоссов, но не считаете что у них есть шанс сохраниться как вид. Ведь они не
-                  могут эволюционировать и в масштабах вселенной их раса обречена на вымирание. Тераны это биомасса, их
-                  эссенция может быть ассимилирована и использована во благо роя.<br><br>
+    <div class="main">
+        <!-- <audio class="soundtrack" autoplay="true" loop="true" preload="auto">
+            <source src="audio/soundtrack.mp3" type='audio/mpeg; codecs="mp3"'>
+        </audio> -->
 
-                  -Понятие совершенства растяжимо. Можно стремиться, невозможно достичь. Совершенство, как цель, лишено
-                  смысла.<br>
-                  -Смерть не имеет значения, важна только эссенция.<br>
-                  (Абатур)
-               </h3>
-               <script>
-                  document.write(VK.Share.button({
-                     url: 'https://vk.com/app6904141_73181995',
-                     title: 'Я Зерг, а кто ты в Starcraft?',
-                     image: 'https://morphismail.github.io/starcraft2/img/zerg.png',
-                     noparse: true,
-                  }, {
-                     type: 'custom',
-                     text: '<button><i class="fab fa-vk"></i> Рассказать друзьям</button>'
-                  }));
-               </script>
+        <div class="app" v-show="showMain">
+            <div class="app__header">
+                <img src="img/logo.png" class="app__logo">
             </div>
-         </div>
-         <div class="primal">
-            <img src="img/primal.png" alt="">
-            <div>
-               <h1>Изначальный зерг</h1>
-               <h3>Всё что вас интересует – это Эссенция, чем её больше тем лучше для вас. Вы эволюционируете,
-                  адаптируетесь и подстраиваетесь под окружающую среду. Нет таких проблем, которые вы не решите.
-                  Благодаря
-                  постоянному сбору эссенции вы можете в любой момент измениться. Эссенция это ваш образ жизни.<br><br>
-
-                  -Так много видов эссенции. Сотни видов. И с каждым годом всё больше. Нужно её всю собрать.<br>
-                  -Мне нужна эссенция. Эссенция это жизнь. Я жить без неё не могу.<br>
-                  (Дехака)
-               </h3>
-               <script>
-                  document.write(VK.Share.button({
-                     url: 'https://vk.com/app6904141_73181995',
-                     title: 'Я Изначальный зерг, а кто ты в Starcraft?',
-                     image: 'https://morphismail.github.io/starcraft2/img/primal.png',
-                     noparse: true,
-                  }, {
-                     type: 'custom',
-                     text: '<button><i class="fab fa-vk"></i> Рассказать друзьям</button>'
-                  }));
-               </script>
+            <div class="app__body">
+                <button class="app__btn" @click="goToQestions">
+                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                    <div class="app__btn-text">Play</div>
+                </button>
+                <button class="app__btn" @click="goToAchivments">
+                    <i class="fa fa-trophy" aria-hidden="true"></i>
+                    <div class="app__btn-text">Achievements</div>
+                </button>
+                <button class="app__btn" @click="goToSocial">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    <div class="app__btn-text">Social</div>
+                </button>
+                <button class="app__btn btn__sound">
+                    <i class="fa fa-volume-up" aria-hidden="true"></i>
+                    <div class="app__btn-text">Sound</div>
+                </button>
             </div>
-         </div>
-         <div class="protos">
-            <img src="img/protos.png" alt="">
-            <div>
-               <h1>Протосс</h1>
-               <h3>Вы горды и безупречны. Честь ведёт вас сквозь пучину неприятностей, которые подстерегают ваш народ со
-                  времён войны со Сверхразумом. За Айур вы готовы сражаться до смерти. Все протоссы стремятся быть
-                  похожими
-                  на вас. У вашего народа вечная вражда с зергами, очищать миры от их скверны и уничтожать улей за ульем
-                  вот что является вашей первостепенной целью. Пока зерги не будут уничтожены, протоссы не смогут спать
-                  спокойно.<br><br>
+        </div>
 
-                  -Сила в единстве.<br>
-                  (Артанис)
-               </h3>
-               <script>
-                  document.write(VK.Share.button({
-                     url: 'https://vk.com/app6904141_73181995',
-                     title: 'Я Протосс, а кто ты в Starcraft?',
-                     image: 'https://morphismail.github.io/starcraft2/img/protos.png',
-                     noparse: true,
-                  }, {
-                     type: 'custom',
-                     text: '<button><i class="fab fa-vk"></i> Рассказать друзьям</button>'
-                  }));
-               </script>
+        <!-- Достижения -->
+        <div class="app" v-show="showAchivments">
+            <div class="app__body">
+                <div class="app__body-inner">
+                    <h2 class="app__body-title"><i class="fa fa-trophy" aria-hidden="true"></i> Достижения</h2>
+                    <div class="app__body-top">
+                        <div class="app__card">
+                            <div class="app__card-text">Счёт</div>
+                            <div class="app__card-count">{{ totalScore }}</div>
+                        </div>
+                        <div class="app__card">
+                            <div class="app__card-text">Открыто рас</div>
+                            <div class="app__card-count">{{ openRaces }}</div>
+                        </div>
+                        <div class="app__card">
+                            <div class="app__card-text">Всего игр</div>
+                            <div class="app__card-count">{{ totalGames }}</div>
+                        </div>
+                        <div class="app__card">
+                            <div class="app__card-text">Любимая раса</div>
+                            <div class="app__card-count">{{ favoriteRace }}</div>
+                        </div>
+                    </div>
+                    <div class="app__body-middle">
+                        <div class="app__result" 
+                                v-for="(race, k) in results" 
+                                v-show="showResultRace[k]" 
+                                @click="goToResult(k)"
+                        >
+                            <div class="app__result-score">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <div class="app__result-count">{{ race.points }}</div>
+                            </div>
+                            <div class="app__result-name">{{ race.name }}</div>
+                            <div class="app__result-amount">{{ totalGame[k] }}</div>
+                        </div>
+                    </div>
+                    <div class="app__body-bottom">
+                        <button class="app__btn btn__back btn__achivment" @click="goToMain">
+                            <i class="fa fa-reply" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class="taldarim">
-            <img src="img/taldarim.png" alt="">
-            <div>
-               <h1>Талдарим</h1>
-               <h3>В былые времена вы служили Амуну, падшему Зел-Нага, сейчас же ваш народ обрёл свободу. После того как
-                  Аларак стал владыкой талдаримов победив Малаша в поединке Рак-Шир, он не просто изменил свой статус в
-                  цепи вознесения, но и привел талдаримов к мирному сосуществованию с другими народами протоссов. Теперь
-                  можно восстанавливать свои миры как один единый сильный народ. И ваши навыки будут очень полезны в
-                  этой
-                  непростой задаче.<br><br>
+        </div>
 
-                  -Ты разговариваешь с владыкой.<br>
-                  -Как ты можешь мне послужить?<br>
-                  (Аларак)
-               </h3>
-               <script>
-                  document.write(VK.Share.button({
-                     url: 'https://vk.com/app6904141_73181995',
-                     title: 'Я Талдарим, а кто ты в Starcraft?',
-                     image: 'https://morphismail.github.io/starcraft2/img/taldarim.png',
-                     noparse: true,
-                  }, {
-                     type: 'custom',
-                     text: '<button><i class="fab fa-vk"></i> Рассказать друзьям</button>'
-                  }));
-               </script>
+        <!-- Вопросы -->
+        <div class="app" v-show="showQuestions">
+            <div class="app__header">
+                <div class="app__header-inner">
+                    <div class="app__count"># {{ number+1 }}</div>
+                    <div class="app__text">{{ questions[number][0] }}</div>
+                </div>
             </div>
-         </div>
-         <div class="terran">
-            <img src="img/terran.png" alt="">
-            <div>
-               <h1>Терран</h1>
-               <h3>Вас не интересуют проблемы протоссов и зергов, вечная вражда и опустошение миров. Кровавый след,
-                  который
-                  тянется с незапамятных времён за этими враждующими расами затрагивает и терранов, как бы сильно вы не
-                  старались не вмешиваться. Избежать контакта с протоссами не получилось, но с ними можно договориться в
-                  отличии от зергов. Простые человеческие радости украшают вашу жизнь. Общение с друзьями, поход в бар с
-                  хорошей музыкой, отдых на природе. Что еще нужно человеку.<br><br>
-
-                  -Не связывайтесь с ребятами с Мар-Сары.<br>
-                  (Рейнор)
-               </h3>
-               <script>
-                  document.write(VK.Share.button({
-                     url: 'https://vk.com/app6904141_73181995',
-                     title: 'Я Терран, а кто ты в Starcraft?',
-                     image: 'https://morphismail.github.io/starcraft2/img/terran.png',
-                     noparse: true,
-                  }, {
-                     type: 'custom',
-                     text: '<button><i class="fab fa-vk"></i> Рассказать друзьям</button>'
-                  }));
-               </script>
+            <div class="app__body">
+                <button class="app__btn" 
+                        v-for="(answer, i) in questions[number][1]" 
+                        v-on:click="nextQuestion(questions[number][2][i])"
+                >
+                    <div class="app__btn-text">{{ answer }}</div>
+                </button>
             </div>
-         </div>
-         <div class="hybrid">
-            <img src="img/hybrid.png" alt="">
-            <div>
-               <h1>Гибрид</h1>
-               <h3>Чистота формы и чистота эссенции присутствует в вашем организме. Вы одно из немногих существ, которых
-                  стремились создать Зел-Нага. Доктор Наруд сумел воплотить все планы Зел-Нага в жизнь и теперь вы
-                  идеальное орудие. Не смотря на то что вы гибрид зерга и протосса вы не чувствуете симпатии к этим
-                  расам,
-                  а считаете высшей расой Гибридов.<br><br>
+        </div>
 
-                  -Всё только начинается. Амун шептал об этом с далёких звёзд.<br>
-                  (Наруд)
-               </h3>
-               <script>
-                  document.write(VK.Share.button({
-                     url: 'https://vk.com/app6904141_73181995',
-                     title: 'Я Гибрид, а кто ты в Starcraft?',
-                     image: 'https://morphismail.github.io/starcraft2/img/hybrid.png',
-                     noparse: true,
-                  }, {
-                     type: 'custom',
-                     text: '<button><i class="fab fa-vk"></i> Рассказать друзьям</button>'
-                  }));
-               </script>
+        <!-- Социальные сети -->
+        <div class="app" v-show="showSocial">
+            <div class="app__body">
+                <a target="_blank" href="https://instagram.com/ismail_asanovich/" class="app__btn">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <div class="app__btn-text">Instagram</div>
+                </a>
+                <a target="_blank" href="https://twitter.com/ITDoctor_morph" class="app__btn">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <div class="app__btn-text">Twitter</div>
+                </a>
+                <a target="_blank" href="https://www.facebook.com/drinei" class="app__btn">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <div class="app__btn-text">Facebook</div>
+                </a>
+                <a target="_blank" href="https://vk.com/morphop" class="app__btn">
+                    <i class="fa fa-vk" aria-hidden="true"></i>
+                    <div class="app__btn-text">Vkontakte</div>
+                </a>
+                <a target="_blank" href="https://www.youtube.com/c/ITDoctor" class="app__btn">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    <div class="app__btn-text">YouTube</div>
+                </a>
+                <button class="app__btn btn__back" @click="goToMain">
+                    <i class="fa fa-reply" aria-hidden="true"></i>
+                </button>
             </div>
-         </div>
-         <div class="infested_terran">
-            <img src="img/infested_terran.png" alt="">
-            <div>
-               <h1>Заражённый терран</h1>
-               <h3>Судя по всему вас заразили зерги, теперь вы служите рою. Но это не мешает вам мечтать о мести
-                  зергам.<br><br>
+        </div>
 
-                  -Зараженные всегда поднимаются вновь.<br>
-                  -Когда ОЗД вернется в сектор, от вас ничего не останется.<br>
-                  (Стуков)
-               </h3>
-               <script>
-                  document.write(VK.Share.button({
-                     url: 'https://vk.com/app6904141_73181995',
-                     title: 'Я Заражённый Терран, а кто ты в Starcraft?',
-                     image: 'https://morphismail.github.io/starcraft2/img/infested_terran.png',
-                     noparse: true,
-                  }, {
-                     type: 'custom',
-                     text: '<button><i class="fab fa-vk"></i> Рассказать друзьям</button>'
-                  }));
-               </script>
+        <!-- Экран с результатом -->
+        <div class="app results" v-show="showResult" :data-race="resultRace">
+            <div class="app__body">
+                <div class="app__results-inner">
+                    <div class="results__title">{{ results[resultRace].name }}</div>
+                    <div class="results__img">
+                        <img :src="'img/'+resultRace+'_logo.png'">
+                    </div>
+                    <div class="results__text-box">
+                        <p class="results__text">{{ results[resultRace].description }}</p>
+                        <p class="results__quote">{{ results[resultRace].quote1 }}</p>
+                        <p class="results__quote">{{ results[resultRace].quote2 }}</p>
+                        <p class="results__author">{{ results[resultRace].author }}</p>
+                    </div>
+                    <div>
+                        <button :class="'app__btn btn__back btn__'+resultRace" 
+                                @click="goToAchivments"
+                        >
+                            <i class="fa fa-reply" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
+        </div>
 
-   <script src="jquery-3.3.1.min.js"></script>
-   <script src="script.js"></script>
+    </div>
+    <script src="js/vue.js"></script>
+    <script src="js/const.js"></script>
+    <script>
+        let app = new Vue({
+            el: '.main',
+            data: {
+                sound: 'off', // или up Управление звуком
+                showMain: true, //Главынй экран
+                showQuestions: false, //Экран с вопросами
+                showAchivments: false, //Экран с достижениями
+                showSocial: false, //Экран социальных сетей
+                showResult: false, //Экран результатов
+                number: 0, //Номер вопроса
+                //Очков для подсчета результатов
+                score: {
+                    'zerg': 0, 
+                    'primal': 0,
+                    'protoss': 0,
+                    'taldarim': 0,
+                    'terran': 0,
+                },
+                //Всего игр за каждую расу
+                totalGame: localStorage.getItem('sc2TotalGame') ? JSON.parse(localStorage.getItem('sc2TotalGame')) : {
+                    'zerg': 0, 
+                    'primal': 0,
+                    'protoss': 0,
+                    'taldarim': 0,
+                    'terran': 0,
+                    'infested': 0,
+                    'hybrid': 0,
+                },
+                //Всего сыграно раз
+                totalGames: localStorage.getItem('sc2TotalGames') ? localStorage.getItem('sc2TotalGames') : 0, 
+                questions: questions, //Вопросы для вывода
+                results: results, //Результаты для вывода
+                resultRace: 'infested', //Раса для результатов
+                
+            },
+            computed: {
+                //Посчитать число открытых рас
+                openRaces() {
+                    let count=0;
+                    for(let i in this.totalGame) {
+                        if(this.totalGame[i]>0) count++;
+                    }
+                    return count;
+                },
+                //Общий счет игры
+                totalScore() {
+                    let score=0;
+                    for(let i in this.totalGame) {
+                        score+=(this.totalGame[i]*results[i].points);     
+                    }
+                    return score;
+                },
+                //Показывать или нет табличку с расой в достижениях
+                showResultRace() {
+                    return{
+                    'zerg': this.totalGame.zerg > 0 ? true : false, //Для показа таблички в окне достижений
+                    'primal': this.totalGame.primal > 0 ? true : false, 
+                    'protoss': this.totalGame.protoss > 0 ? true : false, 
+                    'taldarim': this.totalGame.taldarim > 0 ? true : false, 
+                    'terran': this.totalGame.terran > 0 ? true : false, 
+                    'infested': this.totalGame.infested > 0 ? true : false, 
+                    'hybrid': this.totalGame.hybrid > 0 ? true : false, 
+                    }
+                },
+                //Любимая раса
+                favoriteRace() {
+                    let max='zerg';
+                    for(let i in this.totalGame) {
+                        if(this.totalGame[i]>this.totalGame[max]) {
+                            max=i;
+                        }  
+                    }
+                    let names = {
+                        'zerg':"Зерг",
+                        'primal':"Изначальный зерг",
+                        'terran':"Терран",
+                        'infested':"Заражённый терран",
+                        'protoss':"Протосс",
+                        'taldarim':"Талдарим",
+                        'hybrid':"Гибрид"
+                    }
+                    return names[max];
+                }
+            },
+            methods: {
+                //К следующему вопросу
+                nextQuestion(answer) {
+                    if (this.number == 24) { 
+                        this.number = 0 
+                        this.endGame();    
+                    } else { 
+                        this.number++ 
+                    }
+                    //console.log(answer);
+                    eval(answer);
+                    //console.log('Зерг: '+this.score.zerg)
+                    //console.log('Изначальный: '+this.score.primal)
+                    //console.log('Протосс: '+this.score.protoss)
+                    //console.log('Талдарим: '+this.score.taldarim)
+                    //console.log('Терран: '+this.score.terran)
+                },
+                //Конец игры
+                endGame(callback) {
+                    //Количество игр (увеличивается после каждой игры)
+                    this.totalGames++;
+                    localStorage.setItem('sc2TotalGames', this.totalGames);
+                    //Проверка на одну из рас
+                    //Зерг
+                    if (this.score.zerg > this.score.protoss && 
+                    this.score.zerg > this.score.terran && 
+                    this.score.primal < 8 && 
+                    Math.abs(this.score.protoss - this.score.zerg) > 3) { 
+                        this.goToResult('zerg');
+                        this.totalGame.zerg++;
+                    } 
+                    //Изначальный
+                    else if (this.score.primal > this.score.protoss && 
+                    this.score.primal > this.score.terran && 
+                    this.score.primal == 8) { 
+                        this.goToResult('primal');
+                        this.totalGame.primal++;
+                    } 
+                    //Протосс
+                    else if (this.score.protoss > this.score.zerg && 
+                    this.score.protoss > this.score.terran && 
+                    this.score.taldarim < 5 && 
+                    Math.abs(this.score.protoss - this.score.zerg) > 3) { 
+                        this.goToResult('protoss');
+                        this.totalGame.protoss++;
+                    } 
+                    //Талдарим
+                    else if (this.score.protoss > this.score.zerg && 
+                    this.score.protoss > this.score.terran && 
+                    this.score.taldarim == 5) { 
+                        this.goToResult('taldarim');
+                        this.totalGame.taldarim++;
+                    } 
+                    //Терран
+                    else if (this.score.terran > this.score.zerg && 
+                    this.score.terran > this.score.protoss) { 
+                        this.goToResult('terran');
+                        this.totalGame.terran++;
+                    }
+                    //Гибрид
+                    else if (Math.abs(this.score.protoss - this.score.zerg) <= 3) { 
+                        this.goToResult('hybrid');
+                        this.totalGame.hybrid++;
+                    } 
+                    //Заражённый терран
+                    else { 
+                        this.goToResult('infested');
+                        this.totalGame.infested++;
+                    }
+                    localStorage.setItem('sc2TotalGame', JSON.stringify(this.totalGame));
+                },
+                //Перейти на главную страницу
+                goToMain(){
+                    this.showMain = true;
+                    this.showQuestions = false;
+                    this.showAchivments = false;
+                    this.showSocial = false;
+                    this.showResult = false;
+                },
+                //На страницу социальных сетей
+                goToSocial(){
+                    this.showMain = false;
+                    this.showQuestions = false;
+                    this.showAchivments = false;
+                    this.showSocial = true;
+                    this.showResult = false;
+                },
+                //На страницу достижений
+                goToAchivments(){
+                    if(this.totalGames>0) {
+                        this.showMain = false;
+                        this.showQuestions = false;
+                        this.showAchivments = true;
+                        this.showSocial = false;
+                        this.showResult = false;
+                    } else {
+                        this.goToQestions()
+                    }
+                },
+                //На страницу с вопросами
+                goToQestions(){
+                    this.score = {
+                        'zerg': 0, //Обнулить очки для нового подсчета
+                        'primal': 0,
+                        'protoss': 0,
+                        'taldarim': 0,
+                        'terran': 0,
+                    }
+                    this.showMain = false;
+                    this.showQuestions = true;
+                    this.showAchivments = false;
+                    this.showSocial = false;
+                    this.showResult = false;
+                },
+                //На страницу результата расы
+                goToResult(race) {
+                    this.showMain = false;
+                    this.showQuestions = false;
+                    this.showAchivments = false;
+                    this.showSocial = false;
+                    this.showResult = true;
+                    this.resultRace = race;
+                },
+            }
+        })
+
+        let audio = new Audio('audio/soundtrack.mp3');
+        //let audio = document.querySelector('.soundtrack');
+        let audio_btn = document.querySelector('.btn__sound');
+        let audio_icon = document.querySelector('.btn__sound i');
+        
+        audio.muted = false;
+        audio.autoplay = true;
+        audio.volume = 0.2;
+        //console.log("Громкость: "+audio.volume);
+         
+        audio.addEventListener('loadedmetadata', function () {
+            audio.currentTime = 0 + Math.random() * (audio.duration + 1 - 0);
+            //console.log("Позиция воспроизведения: "+audio.currentTime);
+            
+        })
+        
+        audio_btn.addEventListener('click', function() {
+            if(audio.muted) {
+            //Если звук отключен то включить
+                audio.muted = false;
+                audio_icon.classList.add('fa-volume-up');
+                audio_icon.classList.remove('fa-volume-off');
+                //console.log('Звук включен'); 
+            } else if(!audio.muted) {
+            //Если включен то отключить
+                audio.muted = true;
+                audio_icon.classList.add('fa-volume-off');
+                audio_icon.classList.remove('fa-volume-up');
+                //console.log('Звук отключен');     
+            }
+        })
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,289 @@
+/*Общие стили*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Impact';
+}
+
+i.fa {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+/*Главный экран*/
+.app {
+    background-image: url(../img/background__main.jpg);
+    background-repeat: repeat-x;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    animation: slide 90s linear infinite;
+}
+@keyframes slide {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.app__header {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 7px solid #FDB54D;
+    min-height: 247px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.app__logo {
+    padding: 20px 0;
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.app__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    overflow: auto;
+}
+
+.app__btn {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 50px;
+    width: 240px;
+    background-color: #1978D3;
+    box-shadow: 0px 7px 0px 0px #01579A;
+    margin: 0 auto;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.app__btn:focus {
+    outline: none;
+}
+
+.app__btn-text {}
+
+
+
+/* Для всех экранов */
+.btn__back {
+    width: 70px;
+    height: 70px;
+    box-shadow: none;
+    border-radius: 50%;
+}
+
+/* Вопросы */
+.app__header-inner {
+    color: #fff;
+    /* min-height: 150px; */
+    text-align: center; 
+}
+.app__count {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.app__text {
+    font-size: 18px;
+}
+
+/* Достижения */
+.app__body-inner {
+    max-width: 375px;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.app__body-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.app__body-top {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content max-content;
+    grid-gap: 10px;
+    place-content: center center;
+    margin-bottom: 20px;
+}
+.app__card {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 10px;
+    border: 5px solid rgba(1, 88, 154, 0.5);
+    text-align: center;
+}
+.app__card-text {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.app__card-count {
+    font-size: 18px;
+}
+.app__body-middle {
+margin-bottom: 15px;
+}
+.app__result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border: 5px solid rgba(1, 88, 154, 0.8);
+    background-color: rgba(25, 121, 211, 0.8);
+    margin-bottom: 7px;
+}
+.app__result:last-child {
+    margin-bottom: 0px;
+}
+.app__result-score {
+
+}
+.fa {
+
+}
+i.fa-star {
+    margin-right: 0;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+.app__result-count {
+
+}
+.app__result-name {
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+.app__result-amount {
+    font-size: 18px;
+}
+.app__body-bottom {
+
+}
+.app__btn {
+
+}
+.btn__back {
+
+}
+/*Кнопка назад на экране роезультата*/
+.btn__zerg {
+    background-color: #762877;
+}
+.btn__primal {
+    background-color: #56a725;
+}
+.btn__protoss {
+    background-color: #fce356;
+    color: #000;
+}
+.btn__taldarim {
+    background-color: #9d0101;
+}
+.btn__terran {
+    background-color: #da8618;
+}
+.btn__infested {
+    background-color: #f5b673;
+    color: #000;
+}
+.btn__hybrid {
+    background-color: #fc7654;
+}
+.btn__achivment {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 5px solid rgba(1, 88, 154, 0.5);
+}
+
+
+.fa-reply {
+
+}
+
+/* Результаты */
+.app__results-inner {
+    color: #fff;
+    padding: 20px;
+}
+.results__title {
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.results__img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.results__img img {
+    width: 250px;
+}
+.results__text-box {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 20px;
+}
+.results__text {
+    margin-bottom: 20px;
+}
+.results__quote {
+
+}
+.results__author {
+
+}
+
+.app.results {
+    animation: none;
+    background-size: cover;
+    background-position: center center;
+}
+.app.results[data-race="zerg"] {
+    background-image: url(../img/zerg_bg.jpg);
+}
+.app.results[data-race="primal"] {
+    background-image: url(../img/primal_bg.jpg);
+}
+.app.results[data-race="terran"] {
+    background-image: url(../img/terran_bg.jpg);
+}
+.app.results[data-race="infested"] {
+    background-image: url(../img/infested_bg.jpg);
+}
+.app.results[data-race="protoss"] {
+    background-image: url(../img/protoss_bg.jpg);
+}
+.app.results[data-race="taldarim"] {
+    background-image: url(../img/taldarim_bg.jpg);
+    background-position: 40% 0;
+}
+.app.results[data-race="hybrid"] {
+    background-image: url(../img/hybrid_bg.jpg);
+    background-position: 45% 0;
+}
