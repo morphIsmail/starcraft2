@@ -24,25 +24,25 @@
             <div class="app__body">
                 <button class="app__btn" @click="goToQestions">
                     <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-                    <div class="app__btn-text">Play</div>
+                    <div class="app__btn-text">Начать</div>
                 </button>
                 <button class="app__btn" @click="goToAchivments">
                     <i class="fa fa-trophy" aria-hidden="true"></i>
-                    <div class="app__btn-text">Achievements</div>
+                    <div class="app__btn-text">Достижения</div>
                 </button>
                 <button class="app__btn" @click="goToSocial">
-                    <i class="fa fa-users" aria-hidden="true"></i>
-                    <div class="app__btn-text">Social</div>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <div class="app__btn-text">Автор</div>
                 </button>
                 <button class="app__btn btn__sound">
                     <i class="fa fa-volume-up" aria-hidden="true"></i>
-                    <div class="app__btn-text">Sound</div>
+                    <div class="app__btn-text">Звук</div>
                 </button>
             </div>
         </div>
 
         <!-- Достижения -->
-        <div class="app" v-show="showAchivments">
+        <div class="app ahivments" v-show="showAchivments">
             <div class="app__body">
                 <div class="app__body-inner">
                     <h2 class="app__body-title"><i class="fa fa-trophy" aria-hidden="true"></i> Достижения</h2>
